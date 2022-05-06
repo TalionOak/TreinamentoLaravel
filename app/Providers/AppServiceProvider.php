@@ -14,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Para chamar ClientRepositoryEloquent
+        $this->app->
+        bind('App\Repositories\Contracts\ClientRepositoryInterface', 'App\Repositories\ClientRepositoryEloquent');
     }
 
     /**
